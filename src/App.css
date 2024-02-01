@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600;700;800&display=swap');
+
+
+/* ________________NAVIGATION START___________________ */
+
+.nav_search_shadow {
+    box-shadow: 0 8px 20px rgb(0 0 0 / 6%);
+}
+
+.nav_shadow {
+    box-shadow: 0 3px 9px rgb(0 0 0 / 5%);
+}
+
+.nav_close_shadow {
+    box-shadow: 0 10px 30px rgb(0 0 0 / 6%);
+}
+
+
+.nav_item {
+    height: 80px;
+    position: relative;
+    cursor: pointer;
+    color: #231F40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 23px;
+}
+
+.nav_item:hover .nav_main_items {
+    color: #525Fe1;
+}
+
+.nav_item:hover .nav_drop_down {
+    visibility: visible !important;
+    opacity: 1;
+}
+
+.nav_drop_down {
+    min-width: 210px;
+    height: auto;
+    position: absolute;
+    top: 79px;
+    left: 0;
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    text-align: left;
+    padding: 25px 0px 25px 30px;
+    -webkit-transition: all .3s ease 0s;
+    -o-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+    background-color: var(--color-white);
+    box-shadow: 0 8px 30px rgb(0 0 0 / 4%);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.nav_side_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.nav_side_option:hover .nav_side_main {
+    color: #525Fe1;
+}
+
+.nav_side_option:hover .nav_side_container {
+    opacity: 1;
+    visibility: visible !important;
+}
+
+.nav_side_container {
+    min-width: 210px;
+    height: auto;
+    position: absolute;
+    top: -2px;
+    left: 179px;
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    text-align: left;
+    padding: 25px 16px 25px 30px;
+    -webkit-transition: all .3s ease 0s;
+    -o-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+    background-color: var(--color-white);
+    box-shadow: 0 8px 30px rgb(0 0 0 / 4%);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.accordion {
+    box-shadow: none !important;
+    border-radius: 0% !important;
+    border-bottom: .05px solid #EEEEEE;
+    border-top: none !important;
+}
+
+.accordion .MuiAccordionDetails-root {
+    padding: 0px;
+    border: none !important;
+}
+
+.Mui-expanded {
+    margin: 0px !important;
+    border-bottom: 1px solid white !important;
+}
+
+#panel41bh-header,
+#panel42bh-header,
+#panel43bh-header,
+#panel44bh-header {
+    padding: 0px !important;
+}
+
+/* ________________ NAVIGATION END ___________________ */
+/* ________________ HOME ONE START ___________________ */
+
+
+.course-card-hover {
+    transition: width .4s ease-in;
+    width: 0px;
+}
+
+.course-card:hover .course-card-hover {
+    width: 100%;
+    background-color: #525FE1;
+    height: 2px;
+}
+
+.course-card:hover {
+    transform: translateY(-20px);
+    transition: all .4s ease-in-out;
+}
+
+.img-expand:hover .img1 {
+    scale: 1.1;
+}
+
+.slick-prev,
+.slick-next {
+    display: none !important;
+}
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 14px !important;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px !important;
+    height: 22px !important;
+    content: '•';
+    border: transparent 2px solid;
+    text-align: center;
+    opacity: 1 !important;
+    color: rgba(82, 95, 225, .5) !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #525FE1 !important;
+    border: #525FE1 2px solid;
+    border-radius: 50%;
+}
+
+ul.slick-dots {
+    width: auto !important;
+    bottom: 5px !important;
+}
+
+.instructor-card-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+}
+
+
+.instructor-card:hover .instructor-card-hidden {
+    opacity: 1;
+    visibility: visible !important;
+
+}
+
+.custom-btn {
+    padding: 18px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+    position: relative;
+    z-index: 2;
+}
+
+.custom-btn:hover {
+    background-color: white !important;
+}
+
+/* Pseudo-elements for wave rings */
+.custom-btn::before,
+.custom-btn::after {
+    content: "";
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Animation for the first ring */
+.custom-btn::before {
+    width: 40px;
+    height: 40px;
+    animation-name: wave-ring1;
+}
+
+/* Animation for the second ring */
+.custom-btn::after {
+    width: 70px;
+    height: 70px;
+    animation-name: wave-ring2;
+}
+
+/* Keyframes for the animations */
+@keyframes wave-ring1 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 140px;
+        height: 140px;
+        opacity: 0;
+    }
+}
+
+@keyframes wave-ring2 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+}
+
+/* ________________ HOME ONE END ___________________ */
+
+/* ________________ HOME TWO START___________________ */
+
+.line::before {
+    left: 0;
+    top: 12px;
+    width: 50px;
+    height: 2px;
+    background: var(--color-primary);
+    content: "";
+    position: absolute;
+}
+
+.home-two-courseItem {
+    background-color: #F5F5F5 !important;
+}
+
+.home-two-courseItem:hover {
+    background-color: #525FE1 !important;
+}
+
+.home-two-courseItem:hover .svg {
+    display: none;
+}
+
+.home-two-courseItem:hover h3,
+.home-two-courseItem:hover p {
+    color: white;
+}
+
+
+.home-two-courseItem:hover span {
+    display: block !important;
+    color: white;
+}
+
+.home-two-feature:hover .before-hover{
+    display: none !important; 
+}
+.after-hover{
+    display: none;
+    background-color: #525FE1;
+    padding: 14px;
+    color: white;
+}
+.home-two-feature:hover .after-hover{
+    display: block !important; 
+}
+
+.slick-slider-homeTwo ul.slick-dots {
+    width: 100% !important;
+    bottom: 0px !important;
+}
+
+.contact-number-hTwo{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    /* color: var(--color-white); */
+    transition: 0.4s;
+    position: relative;
+    display: inline-block;
+}
+
+a.contact-number-hTwo:hover::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+a.contact-number-hTwo::after {
+    position: absolute;
+    content: "";
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    /* background: var(--color-white); */
+    transition: 0.3s;
+}
